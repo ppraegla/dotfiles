@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+set -u
+
+# Vimdiff with only the head of the files
+if [ $# -ne 3 ]
+then
+  echo "Not enough input arguments"
+  return 1
+fi
+
+vimdiff <(head -n $1 $2) <(head -n $1 $3)
