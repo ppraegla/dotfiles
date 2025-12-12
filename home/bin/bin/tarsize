@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Get the size of a tar archive if uncompressed
+set -e
+set -u
+
+TARFILE="$1"
+
+tar --list --verbose --file $TARFILE | awk '{s += $3} END{print s}'
