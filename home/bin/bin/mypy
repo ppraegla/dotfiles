@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Open an interactive python shell and directly import numpy
+set -e
+set -u
+
+python3 -i -c 'import numpy as np'
