@@ -1,6 +1,9 @@
 devcontainer configuration to develop [4C](https://github.com/4C-multiphysics/4C).
 The devcontainer image is based on the 4C dependencies image used for the workflow testing.
 It has all dependencies installed. Inside the devcontainer 4C only needs to be built.
+The devcontainer is build from its own Dockerfile in order to install additional tools
+- `clangd` for code completion
+- `mold` for faster linking
 
 For building create a `devcontainer` preset which inherits from the `docker` preset.
 The build will only run inside the devcontainer.
