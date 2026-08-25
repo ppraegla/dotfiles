@@ -1,0 +1,31 @@
+{
+  "image": "ghcr.io/4c-multiphysics/4c-dependencies-ubuntu24.04:2026.3.0",
+  "remoteUser": "root",
+  "mounts": [
+    "source=${localWorkspaceFolder}/../4C,target=/workspaces/4C,type=bind,consistency=cached",
+    "source=claude-code-config,target=/home/user/.claude,type=volume"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/git": {
+      "version": 2.55
+    },
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/user/.claude",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "xaver.clang-format",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "mhutchie.git-graph",
+        "redhat.vscode-yaml",
+        "ms-vscode.cmake-tools",
+        "Anthropic.claude-code"
+      ]
+    }
+  }
+}
