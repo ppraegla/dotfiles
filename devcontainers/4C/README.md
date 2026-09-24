@@ -21,4 +21,5 @@ feature/  # A feature branch in a git worktree
 - The git repository is mounted as well because the git worktree needs access to the git repository
 - The git worktrees need to be configured with relative paths (`git worktree repair --relative-paths ../feature/`)
 - Git 2.55 is installed to have the relative worktree paths available (Ubuntu 24.04 only provides 2.34)
+- git lfs is installed to handle the lfs files correctly. autoPull is set to false because `git lfs pull` can be called manually if the lfs files are required (save bandwidth).
 - Mount a volume for Claude to avoid re-logins and to have access to the history when restarting the container
