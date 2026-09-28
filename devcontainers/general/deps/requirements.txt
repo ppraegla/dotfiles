@@ -1,0 +1,8 @@
+black
+pytest
+pylint
+numpy
+pyvista
+scipy
+tqdm
+pyyaml

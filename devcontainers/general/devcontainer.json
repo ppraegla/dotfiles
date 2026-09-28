@@ -1,0 +1,30 @@
+{
+  "image": "claude-devcontainer:latest",
+  "remoteUser": "root",
+  "mounts": [
+    "source=claude-code-config,target=/home/user/.claude,type=volume"
+  ],
+  "features": {
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/vscode/.claude",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "james-yu.latex-workshop",
+        "mhutchie.git-graph",
+        "redhat.vscode-yaml",
+        "samuelcolvin.jinjahtml",
+        "Anthropic.claude-code"
+      ]
+    }
+  }
+}
